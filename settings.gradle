@@ -1,0 +1,4 @@
+rootProject.name = 'gradleDemo'
+include ':gradleDemo-web'
+include ':gradleDemo-service'
+include ':gradleDemo-common'
