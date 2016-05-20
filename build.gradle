@@ -3,6 +3,19 @@ allprojects {
     version = '0.1'
 
     repositories {
+//        mavenLocal()
+        maven {
+            url 'http://archiva.dianrong.com/repository/mirror'
+        }
+        maven {
+            url 'http://archiva.dianrong.com/repository/internal'
+        }
+        maven {
+            url 'http://archiva.dianrong.com/repository/snapshots'
+        }
+        maven {
+            url 'https://jcenter.bintray.com/io/springfox/'
+        }
         mavenCentral()
     }
 
