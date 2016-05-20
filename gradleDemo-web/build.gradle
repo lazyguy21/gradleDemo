@@ -6,8 +6,8 @@ dependencies {
 
     compile project(":gradleDemo-service")
     compile project(":gradleDemo-common")
-
-    compile group: 'org.springframework', name: 'spring-context', version: '4.2.6.RELEASE'
+    //spring
+    compile "org.springframework:spring-context:${spring_version}"
     compile "org.springframework:spring-core:${spring_version}"
     compile "org.springframework:spring-jdbc:${spring_version}"
     compile "org.springframework:spring-tx:${spring_version}"
