@@ -1,4 +1,4 @@
-package org.yyf.gradleDemmo.domain;
+package org.yyf.gradleDemo.domain;
 
 import java.util.Date;
 
