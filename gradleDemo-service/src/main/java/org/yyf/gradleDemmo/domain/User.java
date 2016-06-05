@@ -1,5 +1,7 @@
 package org.yyf.gradleDemmo.domain;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.util.Date;
 
 /**
@@ -8,8 +10,18 @@ import java.util.Date;
 public class User {
     private Long id;
     private String name;
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date birthday;
     private Boolean ifOk;
+    private ColorEnum colorEnum;
+
+    public ColorEnum getColorEnum() {
+        return colorEnum;
+    }
+
+    public void setColorEnum(ColorEnum colorEnum) {
+        this.colorEnum = colorEnum;
+    }
 
     public User() {
 
@@ -52,5 +64,16 @@ public class User {
 
     public void setBirthday(Date birthday) {
         this.birthday = birthday;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", birthday=" + birthday +
+                ", ifOk=" + ifOk +
+                ", colorEnum=" + colorEnum +
+                '}';
     }
 }

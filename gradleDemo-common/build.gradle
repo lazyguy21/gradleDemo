@@ -1,1 +1,10 @@
 apply plugin: 'java'
+dependencies{
+    def spring_version = '4.2.6.RELEASE'
+
+    compile project(":gradleDemo-service")
+    compile project(":gradleDemo-common")
+    //spring
+    compile "org.springframework:spring-context:${spring_version}"
+    compile "org.springframework:spring-core:${spring_version}"
+}

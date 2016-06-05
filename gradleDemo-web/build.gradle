@@ -24,6 +24,10 @@ dependencies {
     compile 'com.fasterxml.jackson.core:jackson-core:2.7.4'
     compile 'com.fasterxml.jackson.core:jackson-databind:2.7.4'
     compile 'com.fasterxml.jackson.core:jackson-annotations:2.7.4'
+    //springmvc json dependencies if fastjson
+    compile 'com.alibaba:fastjson:1.2.12'
+
+//    compile group: 'joda-time', name: 'joda-time', version: '2.9.4'
 
     //servlet
     providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
