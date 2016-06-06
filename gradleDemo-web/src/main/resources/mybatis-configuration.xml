@@ -7,71 +7,10 @@
         <setting name="mapUnderscoreToCamelCase" value="true"/>
     </settings>
     <typeAliases>
-        <typeAlias type="com.xiaomaihd.zfengche.child.model.Child" alias="Child"/>
-        <typeAlias type="com.xiaomaihd.zfengche.user.model.SimpleUser" alias="SimpleUser"/>
-        <typeAlias type="com.xiaomaihd.zfengche.user.model.User" alias="User"/>
-        <typeAlias type="com.xiaomaihd.zfengche.user.model.UserBlogIndex" alias="UserBlogIndex"/>
-        <typeAlias type="com.xiaomaihd.zfengche.user.model.UserRelation" alias="UserRelation"/>
-        <typeAlias type="com.xiaomaihd.zfengche.user.model.UserProfile" alias="UserProfile"/>
-
-        <typeAlias type="com.xiaomaihd.zfengche.blog.model.Blog" alias="Blog"/>
-        <typeAlias type="com.xiaomaihd.zfengche.blog.model.BlogCountInfo" alias="BlogCountInfo"/>
-        <typeAlias type="com.xiaomaihd.zfengche.blog.model.BlogRelation" alias="BlogRelation"/>
-        <typeAlias type="com.xiaomaihd.zfengche.blog.model.BlogForShow" alias="BlogForShow"/>
-        <typeAlias type="com.xiaomaihd.zfengche.blog.model.BlogForShowWithMedias" alias="BlogForShowWithMedias"/>
-        <typeAlias type="com.xiaomaihd.zfengche.blog.model.BlogMediaIndex" alias="BlogMediaIndex"/>
-        <typeAlias type="com.xiaomaihd.zfengche.blog.model.ReferenceBlog" alias="ReferenceBlog"/>
-
-
-        <typeAlias type="com.xiaomaihd.zfengche.city.model.Province" alias="Province"/>
-        <typeAlias type="com.xiaomaihd.zfengche.city.model.City" alias="City"/>
 
 
     </typeAliases>
     <typeHandlers>
-        <typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler" javaType="java.math.RoundingMode"/>
-
-        <typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler" javaType="com.xiaomaihd.commons.base.enums.common.ContentType"/>
-
-
-        <typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler" javaType="com.xiaomaihd.commons.base.enums.user.UserType"/>
-        <typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler" javaType="com.xiaomaihd.commons.base.enums.user.UserSource"/>
-        <typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler" javaType="com.xiaomaihd.commons.base.enums.user.UserStatus"/>
-        <typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler" javaType="com.xiaomaihd.commons.base.enums.user.UserGender"/>
-        <typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler" javaType="com.xiaomaihd.commons.base.enums.user.UserRelationType"/>
-
-        <typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler" javaType="com.xiaomaihd.commons.base.enums.blog.BlogType"/>
-        <typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler" javaType="com.xiaomaihd.commons.base.enums.blog.MediaType"/>
-        <typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler" javaType="com.xiaomaihd.commons.base.enums.blog.BlogStatus"/>
-        <typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler" javaType="com.xiaomaihd.commons.base.enums.blog.BlogHotType"/>
-
-        <typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler" javaType="com.xiaomaihd.commons.base.enums.vendor.VendorContentType"/>
-        <typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler" javaType="com.xiaomaihd.commons.base.enums.product.ProductStatus"/>
-        <typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler" javaType="com.xiaomaihd.commons.base.enums.product.ProductQuestionStatus"/>
-        <typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler" javaType="com.xiaomaihd.commons.base.enums.product.ProductType"/>
-
-
-        <typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler" javaType="com.xiaomaihd.commons.base.enums.common.BusinessType"/>
-        <typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler" javaType="com.xiaomaihd.commons.base.enums.common.Status"/>
-
-        <typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler" javaType="com.xiaomaihd.zfengche.version.enums.VersionStatus"/>
-
-        <typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler" javaType="com.xiaomaihd.commons.base.enums.message.MessageType"/>
-        <typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler" javaType="com.xiaomaihd.commons.base.enums.message.MessageBusinessType"/>
-        <typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler" javaType="com.xiaomaihd.commons.base.enums.circle.ShowType"/>
-        <typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler" javaType="com.xiaomaihd.commons.base.enums.post.PostContentType"/>
-        <typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler" javaType="com.xiaomaihd.commons.base.enums.banner.BannerType"/>
-
-        <typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler" javaType="com.xiaomaihd.commons.base.enums.post.PostType"/>
-
-
-        <!-- 订单-->
-        <typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler" javaType="com.xiaomaihd.commons.base.enums.order.OrderStatus"/>
-        <typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler" javaType="com.xiaomaihd.commons.base.enums.order.PaymentType"/>
-
-        <typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler" javaType="com.xiaomaihd.commons.base.enums.recommendNew.RecommendNewType"/>
-
-        <typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler" javaType="com.xiaomaihd.commons.base.enums.selfshot.SelfShotStatus"/>
 
     </typeHandlers>
     <plugins>
