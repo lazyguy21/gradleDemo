@@ -12,6 +12,7 @@ import org.yyf.gradleDemo.service.TestService;
 public class TestServiceImpl implements TestService{
     @Override
     public void test() {
-        int i = 1 / 0;
+//        int i = 1 / 0;
+        System.out.println("testService");
     }
 }

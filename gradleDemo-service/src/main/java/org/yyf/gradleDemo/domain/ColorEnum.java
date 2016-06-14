@@ -1,4 +1,4 @@
-package org.yyf.gradleDemmo.domain;
+package org.yyf.gradleDemo.domain;
 
 /**
  * Created by lazyguy on 2016-6-4.

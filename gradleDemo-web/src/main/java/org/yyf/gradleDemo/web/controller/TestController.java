@@ -1,11 +1,12 @@
 package org.yyf.gradleDemo.web.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.yyf.gradleDemmo.domain.ColorEnum;
-import org.yyf.gradleDemmo.domain.User;
+import org.yyf.gradleDemo.domain.ColorEnum;
+import org.yyf.gradleDemo.domain.User;
+import org.yyf.gradleDemo.service.TestService;
 
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
 
@@ -15,10 +16,12 @@ import java.util.Date;
 @RestController
 @RequestMapping("test")
 public class TestController {
+    @Autowired
+    private TestService testService;
 
     @RequestMapping("test1")
     public String test(HttpServletRequest httpServletRequest) {
-
+        testService.test();
         return "success";
     }
     @RequestMapping("user")
