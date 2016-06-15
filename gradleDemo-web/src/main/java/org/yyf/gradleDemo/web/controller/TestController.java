@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.yyf.gradleDemo.domain.ColorEnum;
 import org.yyf.gradleDemo.domain.User;
+import org.yyf.gradleDemo.service.MockRMIService;
 import org.yyf.gradleDemo.service.TestService;
 
 import javax.servlet.http.HttpServletRequest;
@@ -16,12 +17,14 @@ import java.util.Date;
 @RestController
 @RequestMapping("test")
 public class TestController {
+//    @Autowired
+//    private TestService testService;
     @Autowired
-    private TestService testService;
+    private MockRMIService mockRMIService;
 
     @RequestMapping("test1")
     public String test(HttpServletRequest httpServletRequest) {
-        testService.test();
+//        testService.test();
         return "success";
     }
     @RequestMapping("user")
@@ -35,5 +38,14 @@ public class TestController {
         System.out.println(user);
         System.out.println(name2);
         return user;
+    }
+    @RequestMapping("rmi")
+    public void rmi(){
+        mockRMIService.sleep2();
+//        mockRMIService.sleepDouble();
+//        System.out.println("haha");
+//        System.out.println("zaihaha");
+        mockRMIService.sleep1();
+        mockRMIService.sleep2();
     }
 }

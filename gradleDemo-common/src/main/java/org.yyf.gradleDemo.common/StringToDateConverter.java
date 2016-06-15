@@ -29,6 +29,7 @@ public class StringToDateConverter implements Converter<String,Date> {
         try{
             return simpleDateFormat.parse(s);
         }catch(ParseException e){
+
 //            logger.error("转换日期异常："+e.getMessage() , e);
             throw new IllegalArgumentException("转换日期异常："+e.getMessage() , e);
         }

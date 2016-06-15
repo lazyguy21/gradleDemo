@@ -29,7 +29,9 @@ dependencies {
 
 //    compile group: 'joda-time', name: 'joda-time', version: '2.9.4'
     compile group: 'org.apache.zookeeper', name: 'zookeeper', version: '3.4.6'
-
+    //log
+    compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.5'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version: '2.5'
     //servlet
     providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
 }

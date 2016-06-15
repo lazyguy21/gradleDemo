@@ -103,5 +103,5 @@
     <!--启用aop:这里再声明一次是因为如果要拦截controller，他们的上下文是不一样的-->
     <aop:aspectj-autoproxy/>
 
-
+    <bean class="org.yyf.gradleDemo.web.aop.WebAOP"/>
 </beans>
