@@ -43,8 +43,8 @@ public class TestController {
     public void rmi(){
         mockRMIService.sleep2();
 //        mockRMIService.sleepDouble();
-//        System.out.println("haha");
-//        System.out.println("zaihaha");
+        System.out.println("haha");
+        System.out.println("zaihaha");
         mockRMIService.sleep1();
         mockRMIService.sleep2();
     }

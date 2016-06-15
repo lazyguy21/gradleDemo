@@ -19,7 +19,7 @@ public class MockRMIService {
     @RMI
     public void sleep2(){
 //        System.out.println("wozaiservicelimian");
-        System.out.println("aaa");
+//        System.out.println("aaa");
         System.out.println("aa1");
         System.out.println(111);
         try {
