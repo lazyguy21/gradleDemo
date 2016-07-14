@@ -10,6 +10,7 @@ import org.yyf.gradleDemo.service.TestService;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by lazyguy on 2016-5-20.
@@ -25,6 +26,11 @@ public class TestController {
     @RequestMapping("test1")
     public String test(HttpServletRequest httpServletRequest) {
 //        testService.test();
+        try {
+            TimeUnit.SECONDS.sleep(10);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return "success";
     }
     @RequestMapping("user")

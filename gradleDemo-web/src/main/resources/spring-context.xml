@@ -23,6 +23,18 @@ http://www.springframework.org/schema/task http://www.springframework.org/schema
         <context:exclude-filter type="annotation" expression="org.springframework.web.bind.annotation.RestController"/>
     </context:component-scan>
 
+    <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+        <property name="host" value="smtp.qq.com" />
+        <property name="port" value="25" />
+        <property name="username" value="***@bjnja.com" />
+        <property name="password" value="****" />
+
+        <property name="javaMailProperties">
+            <props>
+                <prop key="mail.smtp.auth">true</prop>
+            </props>
+        </property>
+    </bean>
 
     <!--启用aop-->
     <aop:aspectj-autoproxy/>
