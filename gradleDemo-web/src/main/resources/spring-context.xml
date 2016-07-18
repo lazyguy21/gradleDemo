@@ -24,14 +24,16 @@ http://www.springframework.org/schema/task http://www.springframework.org/schema
     </context:component-scan>
 
     <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+        <property name="host" value="smtp.exmail.qq.com" />
         <property name="host" value="smtp.qq.com" />
         <property name="port" value="25" />
-        <property name="username" value="***@bjnja.com" />
-        <property name="password" value="****" />
+        <!--<property name="username" value="***@bjnja.com" />-->
+        <!--<property name="password" value="****" />-->
 
         <property name="javaMailProperties">
             <props>
                 <prop key="mail.smtp.auth">true</prop>
+                <prop key="mail.smtp.timeout">6000</prop>
             </props>
         </property>
     </bean>
@@ -39,7 +41,8 @@ http://www.springframework.org/schema/task http://www.springframework.org/schema
     <!--启用aop-->
     <aop:aspectj-autoproxy/>
 
-    <!-- 启动定时器 -->
-    <task:annotation-driven/>
-
+    <!-- 启动线程池，或者异步任务 -->
+    <task:annotation-driven executor="eMailTaskExecutor" />
+    <task:executor id="eMailTaskExecutor" queue-capacity="10" pool-size="5-10" keep-alive="60"
+                   rejection-policy="CALLER_RUNS"/>
 </beans>
