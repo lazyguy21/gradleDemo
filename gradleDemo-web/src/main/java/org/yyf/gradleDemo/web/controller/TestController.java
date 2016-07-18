@@ -1,5 +1,7 @@
 package org.yyf.gradleDemo.web.controller;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,6 +20,7 @@ import java.util.concurrent.TimeUnit;
 @RestController
 @RequestMapping("test")
 public class TestController {
+    private static final Logger logger = LogManager.getLogger();
 //    @Autowired
 //    private TestService testService;
     @Autowired
@@ -32,6 +35,16 @@ public class TestController {
             e.printStackTrace();
         }
         return "success";
+    }
+
+    @RequestMapping("log")
+    public void log() {
+        logger.trace("trace info");
+        logger.debug("debug info");
+        logger.info("info  info");
+        logger.warn("warn info");
+        logger.error("error info");
+        logger.fatal("fatal info");
     }
     @RequestMapping("user")
     public User user(HttpServletRequest httpServletRequest) {
