@@ -47,5 +47,7 @@ dependencies {
     compile 'org.springframework.security:spring-security-config:4.1.0.RELEASE'
     compile 'org.springframework.security:spring-security-core:4.1.0.RELEASE'
     compile 'org.springframework.security:spring-security-web:4.1.0.RELEASE'
-
+    //util
+    compile 'com.google.guava:guava:19.0'
+    compile 'org.projectlombok:lombok:1.16.8'
 }

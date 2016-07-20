@@ -25,7 +25,11 @@ public class TestController {
 //    private TestService testService;
     @Autowired
     private MockRMIService mockRMIService;
+    @RequestMapping("ex")
+    public void ex(){
+        throw new RuntimeException("some exception occurs!");
 
+    }
     @RequestMapping("test1")
     public String test(HttpServletRequest httpServletRequest) {
 //        testService.test();
@@ -51,6 +55,10 @@ public class TestController {
         User user = new User(111L,"yyf",new Date(),true);
         user.setColorEnum(ColorEnum.blue);
         return user;
+    }
+    @RequestMapping("date")
+    public void date(Date date){
+        System.out.println(date);
     }
     @RequestMapping("au")
     public User user(User user,String name2){

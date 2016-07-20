@@ -10,7 +10,7 @@ import java.util.Date;
 public class User {
     private Long id;
     private String name;
-    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+//    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date birthday;
     private Boolean ifOk;
     private ColorEnum colorEnum;

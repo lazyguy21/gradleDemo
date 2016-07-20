@@ -5,7 +5,9 @@ dependencies{
     //spring
     compile "org.springframework:spring-context:${spring_version}"
     compile "org.springframework:spring-core:${spring_version}"
-
+    //util
     compile 'com.google.guava:guava:19.0'
+    compile 'org.projectlombok:lombok:1.16.8'
+
 
 }
