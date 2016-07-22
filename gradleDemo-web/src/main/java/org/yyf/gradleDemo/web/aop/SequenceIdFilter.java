@@ -36,19 +36,23 @@ public class SequenceIdFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-        String sequenceId = String.format("%s-%d", hostName, System.currentTimeMillis());
-        ThreadContext.put("requestId", UUID.randomUUID().toString());
-        ThreadContext.put("ip", LocalIpAddressUtil.getIp());
+        try{
+            String sequenceId = String.format("%s-%d", hostName, System.currentTimeMillis());
+            ThreadContext.put("requestId", UUID.randomUUID().toString());
+            ThreadContext.put("ip", LocalIpAddressUtil.getIp());
+            ThreadContext.put("myId",LocalIpAddressUtil.getIp()+System.currentTimeMillis());
+            ThreadContext.put(SEQUENCE_ID_KEY, sequenceId);
+//            MDC.clear();
+//            MDC.put(SEQUENCE_ID_KEY, sequenceId);
 
-        MDC.clear();
-        MDC.put(SEQUENCE_ID_KEY, sequenceId);
+            HttpServletResponse httpServletResponse = (HttpServletResponse) response;
+            httpServletResponse.addHeader(SEQUENCE_HEADER_NAME, sequenceId);
 
-        HttpServletResponse httpServletResponse = (HttpServletResponse) response;
-        httpServletResponse.addHeader(SEQUENCE_HEADER_NAME, sequenceId);
+            chain.doFilter(request, response);
 
-        chain.doFilter(request, response);
-
-        ThreadContext.clearMap();
+        }finally {
+            ThreadContext.clearMap();
+        }
     }
 
     @Override

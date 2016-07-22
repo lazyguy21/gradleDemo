@@ -6,9 +6,11 @@ import java.net.SocketException;
 import java.util.Enumeration;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.UUID;
 
 public class LocalIpAddressUtil {
     public static void main(String[] args) throws SocketException {
+        System.out.println(getIp()+ UUID.randomUUID().toString());
     }
 
     /**

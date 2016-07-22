@@ -27,7 +27,11 @@ public class TestController {
     private MockRMIService mockRMIService;
     @RequestMapping("ex")
     public void ex(){
-        throw new RuntimeException("some exception occurs!");
+
+        RuntimeException runtimeException = new RuntimeException("some exception occurs!");
+        logger.error("ahaha",runtimeException);
+        logger.info("asdfasdf",runtimeException);
+        throw runtimeException;
 
     }
     @RequestMapping("test1")

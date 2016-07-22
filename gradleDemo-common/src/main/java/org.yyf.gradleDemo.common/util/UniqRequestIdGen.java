@@ -1,5 +1,6 @@
 package org.yyf.gradleDemo.common.util;
 
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicLong;
 
 public class UniqRequestIdGen {
@@ -8,8 +9,11 @@ public class UniqRequestIdGen {
     private static final long   startTimeStamp = System.currentTimeMillis();                               // 启动加载时的时间戳，用于requestId的生成过程
     private static final String ip             = LocalIpAddressUtil.getIp(); // 本机ip地址，用于requestId的生成过程
 
-    public static void main(String[] args) {
-        System.out.println(resolveReqId());
+    public static void main(String[] args) throws InterruptedException {
+        for (;;) {
+            TimeUnit.SECONDS.sleep(1);
+            System.out.println(resolveReqId());
+        }
     }
 
     private static String resolveReqId() {

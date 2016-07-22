@@ -11,7 +11,7 @@
                      filePattern="${pathName}/allVerbose.log.%d{yyyy-MM-dd}">
             <ThresholdFilter level="trace" onMatch="ACCEPT" onMismatch="DENY"/>
             <PatternLayout>
-                <pattern>%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n</pattern>
+                <pattern>%X %d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n</pattern>
             </PatternLayout>
             <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
         </RollingFile>
@@ -19,7 +19,7 @@
                      filePattern="${pathName}/allError.log.%d{yyyy-MM-dd}">
             <ThresholdFilter level="error" onMatch="ACCEPT" onMismatch="DENY"/>
             <PatternLayout>
-                <pattern>%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n</pattern>
+                <pattern>%X %d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n</pattern>
             </PatternLayout>
             <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
         </RollingFile>
@@ -27,7 +27,7 @@
                      filePattern="${pathName}/appVerbose.log.%d{yyyy-MM-dd}">
             <ThresholdFilter level="trace" onMatch="ACCEPT" onMismatch="DENY"/>
             <PatternLayout>
-                <pattern>%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n</pattern>
+                <pattern>%X %d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n</pattern>
             </PatternLayout>
             <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
         </RollingFile>
