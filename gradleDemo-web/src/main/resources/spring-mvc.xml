@@ -33,18 +33,18 @@
         <property name="charset" value="UTF-8"/>
         <!-- Default dateFormat -->
         <!--<property name="dateFormat" value="yyyy-MM-dd HH:mm:ss"/>-->
-        <!--&lt;!&ndash; Feature &ndash;&gt;-->
+        <!-- Feature -->
         <!--<property name="features">-->
             <!--<list>-->
                 <!--<value>Your feature</value>-->
             <!--</list>-->
         <!--</property>-->
-        <!--&lt;!&ndash; SerializerFeature &ndash;&gt;-->
-        <!--<property name="serializerFeatures">-->
-            <!--<list>-->
-                <!--<value>Your serializer feature</value>-->
-            <!--</list>-->
-        <!--</property>-->
+        <!-- SerializerFeature -->
+        <property name="serializerFeatures">
+            <list>
+                <value>WriteEnumUsingToString</value>
+            </list>
+        </property>
         <!--&lt;!&ndash; Global SerializeFilter &ndash;&gt;-->
         <!--<property name="serializeFilters">-->
             <!--<list>-->
