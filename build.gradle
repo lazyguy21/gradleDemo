@@ -11,13 +11,15 @@ allprojects {
         sourceCompatibility = "1.8"
         targetCompatibility = "1.8"
     }
-
 }
 
 subprojects {
-
     apply plugin: 'java'
     apply plugin: 'maven-publish'//发布到maven仓库用的plugin
-
+    dependencies {
+        //util
+        compile 'com.google.guava:guava:19.0'
+        compile 'org.projectlombok:lombok:1.16.8'
+    }
 }
 
