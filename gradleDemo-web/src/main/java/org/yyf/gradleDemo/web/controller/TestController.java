@@ -48,10 +48,11 @@ public class TestController {
     @RequestMapping("log")
     public void log() {
         logger.trace("trace info");
-        logger.debug("debug info");
-        logger.info("info  info");
-        logger.warn("warn info");
-        logger.error("error info");
+        
+//        logger.debug("debug info");
+//        logger.info("info  info");
+//        logger.warn("warn info");
+//        logger.error("error info");
         logger.fatal("fatal info");
     }
     @RequestMapping("user")
