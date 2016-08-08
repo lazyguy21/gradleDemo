@@ -48,7 +48,7 @@ public class TestController {
     @RequestMapping("log")
     public void log() {
         logger.trace("trace info");
-        
+        System.out.println("hehe");
 //        logger.debug("debug info");
 //        logger.info("info  info");
 //        logger.warn("warn info");
