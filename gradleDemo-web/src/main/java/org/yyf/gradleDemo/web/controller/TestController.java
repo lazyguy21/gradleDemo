@@ -49,6 +49,10 @@ public class TestController {
     public void log() {
         logger.trace("trace info");
         logger.info("infoinfoinfoinfo");
+
+        System.out.println("haha");
+logger.info("aaaaaaaaaaaaa");
+        System.out.println("hehe");
 //        logger.debug("debug info");
 //        logger.info("info  info");
 //        logger.warn("warn info");
